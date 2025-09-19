@@ -5,8 +5,7 @@ import { useForm, ValidationError } from '@formspree/react'
 import Footer from '@/components/Footer'
 
 export default function Contact() {
-  // <- tutaj wrzuc swój Formspree project ID
-  const [state, handleSubmit] = useForm("mrbajjyr")
+  const [state, handleSubmit] = useForm("YOUR FORM ID")
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

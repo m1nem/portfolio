@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 m1nem-portfolio  
+> Modern, dark-first portfolio with real-time cart, Stripe-ready checkout and contact form powered by Formspree.
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-14.2.32-000000?style=flat&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=black)
+![Tailwind](https://img.shields.io/badge/Tailwind-v3-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel&logoColor=white)
+![Formspree](https://img.shields.io/badge/Contact-Formspree-1E88E5?style=flat&logo=formspree&logoColor=white)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Demo
+[https://m1nem.vercel.app](https://m1nem.vercel.app)  
+*(dark-mode first, 100 Lighthouse, < 50 kB first load)*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 1-Minute Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    git clone https://github.com/m1nem/m1nem-portfolio.git
+    cd m1nem-portfolio
+    npm install
+    cp .env.example .env
+    npm run dev        # http://localhost:3000
 
-## Learn More
+## 📬 Contact Form – Formspree in 30 s
 
-To learn more about Next.js, take a look at the following resources:
+    Register (free tier = 50 submissions / month)
+    Create new form → copy Form Endpoint (looks like https://formspree.io/f/abcdefghi)
+    Paste only the ID part into @/app/contact/index.tsx
+    That’s it – form works instantly (no backend, no SMTP).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deploy to Vercel (one-click)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fm1nem%2Fm1nem-portfolio&env=NEXT_PUBLIC_FORMSPREE_ID,NEXT_PUBLIC_STRIPE_PKEY,STRIPE_SECRET_KEY,NEXT_PUBLIC_URL&project-name=m1nem-portfolio&repo-name=m1nem-portfolio
 
-## Deploy on Vercel
+### Or manually:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    vercel --prod        # CLI must be logged in
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📊 Lighthouse (production)
+
+    Metric	Score
+    Performance	    100
+    Accessibility	100
+    Best Practices	100
+    SEO	            100
+    
+## 📁 Project Structure
+
+    portfolio/
+    ├─ src/                     # Next.js 14 App Router
+    │  ├─ app/                  # Pages, layouts & styles
+    │  ├─ components/           # Re-usable blocks: Footer, Header
+    │  ├─ types/                # Types for TypeScript
+    ├─ public/                  # Images, favicon, etc
+    ├─ next.config.js           # Images, headers, redirects
+    ├─ tailwind.config.js       # Custom colors & keyframes
+    └─ README.md                # ← you are here
+
+## 🤝 Contributing
+
+    Fork & clone
+    Create feature branch (git checkout -b feature/3d-hero)
+    Commit with Conventional Commits
+    Push & open Pull Request
+
+# 📄 License
+
+MIT © 2025 m1nem – feel free to fork, remix or use as template.
+
+## ⭐ Star the repo if you like the design – it keeps the pixels alive!
