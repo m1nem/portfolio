@@ -1,5 +1,5 @@
 # 🎨 m1nem-portfolio  
-> Modern, dark-first portfolio with real-time cart, Stripe-ready checkout and contact form powered by Formspree.
+> Modern, dark-first portfolio with a contact form powered by Formspree.
 
 ![Next.js](https://img.shields.io/badge/Next.js-14.2.32-000000?style=flat&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=black)
