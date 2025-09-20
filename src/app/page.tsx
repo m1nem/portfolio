@@ -10,7 +10,7 @@ export default function Home() {
 
   const texts = [
     'responsive UIs',
-    'modern web apps', 
+    'modern web apps',
     'simple python bots',
     'data scrapers',
     'discord bots'
@@ -75,31 +75,27 @@ export default function Home() {
     }
   ]
 
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
       <section className="relative px-4 sm:px-6 lg:px-8 py-20">
         <div className="mt-16 max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Text content */}
+          <div className="grid lg:grid-cols-1 xl:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                   I turn coffee into
-                  <span className="text-blue-400 inline-block min-w-[20ch] whitespace-nowrap">
+                  <span className="text-blue-400 inline-block min-w-[20ch] whitespace-nowrap ml-2">
                     {rotatingText}<span className="animate-pulse text-blue-400">|</span>
                   </span>
                 </h1>
 
-                <p className="text-lg text-gray-300 max-w-lg">
+                <p className="text-base sm:text-lg text-gray-300 max-w-lg">
                   Teen developer building modern web apps, Discord bots,
                   and data scrapers to fund my college journey.
                 </p>
               </div>
-              
-              <Link 
+
+              <Link
                 href="/projects"
                 className="bg-slate-800/50 rounded-xl p-4 inline-block border border-slate-700 neon-glow cursor-pointer"
               >
@@ -107,10 +103,9 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Right side - Service cards */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {services.map((service, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 neon-glow cursor-pointer"
                 >
