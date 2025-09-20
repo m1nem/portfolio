@@ -20,14 +20,14 @@ export default function Home() {
 
   const typeWriter = async (text: string) => {
     for (let i = 0; i <= text.length; i++) {
-      setRotatingText('' + text.slice(0, i))
+      setRotatingText(text.slice(0, i))
       await sleep(80)
     }
   }
 
   const deleteWriter = async (text: string) => {
     for (let i = text.length; i >= 0; i--) {
-      setRotatingText('' + text.slice(0, i))
+      setRotatingText(text.slice(0, i))
       await sleep(50)
     }
   }
@@ -79,43 +79,41 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <section className="relative px-4 sm:px-6 lg:px-8 py-20">
         <div className="mt-16 max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-1 xl:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  I turn coffee into
-                  <span className="text-blue-400 inline-block min-w-[20ch] whitespace-nowrap ml-2">
-                    {rotatingText}<span className="animate-pulse text-blue-400">|</span>
-                  </span>
-                </h1>
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Lewa – tekst */}
+            <div className="w-full space-y-6 lg:space-y-8">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight break-words">
+                I turn coffee into
+                <span className="text-blue-400 inline-block ml-2 min-w-[18ch] whitespace-nowrap">
+                  {rotatingText}
+                  <span className="animate-pulse text-blue-400">|</span>
+                </span>
+              </h1>
 
-                <p className="text-base sm:text-lg text-gray-300 max-w-lg">
-                  Teen developer building modern web apps, Discord bots,
-                  and data scrapers to fund my college journey.
-                </p>
-              </div>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-xl">
+                Teen developer building modern web apps, Discord bots, and data scrapers to fund my college journey.
+              </p>
 
               <Link
                 href="/projects"
-                className="bg-slate-800/50 rounded-xl p-4 inline-block border border-slate-700 neon-glow cursor-pointer"
+                className="inline-block bg-slate-800/50 rounded-xl px-5 py-3 border border-slate-700 neon-glow cursor-pointer text-white hover:text-blue-400 transition"
               >
                 Explore My Work
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Prawa – karty */}
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 neon-glow cursor-pointer"
+                  className="bg-slate-800/50 rounded-xl p-5 border border-slate-700 neon-glow cursor-pointer"
                 >
-                  <div className="text-blue-400 mb-4">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">
+                  <div className="text-blue-400 mb-3">{service.icon}</div>
+                  <h3 className="text-base sm:text-lg font-semibold text-white mb-1">
                     {service.title}
                   </h3>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-400 text-xs sm:text-sm">
                     {service.description}
                   </p>
                 </div>
@@ -124,6 +122,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   )
