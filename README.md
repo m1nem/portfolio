@@ -18,10 +18,9 @@
 
 ## 📦 1-Minute Setup
 
-    git clone https://github.com/m1nem/m1nem-portfolio.git
-    cd m1nem-portfolio
+    git clone https://github.com/m1nem/portfolio.git
+    cd portfolio
     npm install
-    cp .env.example .env
     npm run dev        # http://localhost:3000
 
 ## 📬 Contact Form – Formspree in 30 s
